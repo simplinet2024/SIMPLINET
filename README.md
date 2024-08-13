@@ -3,7 +3,7 @@ This repository contains the code for simplifying population flow networks using
 
 Directory Structure
 Data/: Stores the raw data files used for analysis and modeling, such as flow matrices and population data.
-GISData/: Contains Geographic Information System (GIS) data files, such as geographic boundary files and raster data, used for spatial analysis.
+GISData/: Contains Geographic Information System (GIS) data files, such as geographic boundary files and raster data, used for spatial analysis. All shapefiles in this directory are in the WGS84 coordinate system.
 Output/: Stores all output results from analysis and model runs, including clustering results, flow matrix history, and Rt calculation results.
 Source/: Contains all the source code files used to perform epidemic modeling, simulation, data processing, and analysis. 
 
