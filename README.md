@@ -16,11 +16,20 @@ Implements an epidemic model, used to simulate the spread of a disease across di
 Calculates the adjacency matrix, determining the connections between regions or nodes based on geographic location or other features.
 4. MatrixCalculatorSimilarity.py
 Calculates the similarity matrix, measuring the similarity between different nodes or regions, typically used in clustering analysis.
-5. MatrixCalculatorSimilarityPrevalence.py
-Calculates the similarity matrix based on prevalence or other epidemic-related metrics, used to compare infection rates across different regions.
-6. RtCalculator.py
+5. RtCalculator.py
 Uses multithreading to calculate the real-time reproduction number (Rt) for each grid area and calls RtCalculator.R to perform the actual computation.
-7. RtCalculator.R
+6. RtCalculator.R
 A script written in R, used to calculate the real-time reproduction number (Rt), which is a key indicator of the transmission potential of an infectious disease.
-8. RunEpidemicSimulation.py
+7. RunEpidemicSimulation.py
 The main script that integrates and calls other modules to run the full epidemic simulation process, generating simulation results.
+
+Running Steps
+1. Calculate Matrices:
+Run MatrixCalculatorAdjacency.py to generate the adjacency matrix.
+Run MatrixCalculatorSimilarity.py to generate the similarity matrix.
+2. Run Epidemic Simulation:
+Run RunEpidemicSimulation.py to simulate the spread of the epidemic using the clustering results and Rt values, and generate final output files.
+3. Calculate Rt Values:
+Run RtCalculator.py to compute the real-time reproduction number (Rt) for each grid. This script will invoke the RtCalculator.R script to perform the calculation.
+4. Perform Clustering:
+Run ConstrainedAgglomerativeClustering.py to perform hierarchical clustering based on the calculated matrices. This will also update and save the flow matrix history.
